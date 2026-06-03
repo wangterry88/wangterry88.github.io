@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="王嘉駿 (Terry Wang) 的個人履歷。具備生醫資訊與科技法律雙碩士背景的軟體工程師，專精於 AI、數據工程與工業數位轉型。">
-    <title>王嘉駿 (Terry Wang) - 履歷</title>
+    <meta name="description" content="Terry Wang (王嘉駿) Resume. Software Engineer with dual Master's in Biomedical Informatics and Technology Law.">
+    <title>王嘉駿 (Terry Wang) - 履歷 / Resume</title>
+    
     <!-- 引入字體與 Icon -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +33,6 @@
             background-color: var(--bg-color);
             color: var(--text-main);
             line-height: 1.7;
-            /* 背景加入微弱的漸層光暈 */
             background-image: radial-gradient(circle at top right, #e0f2fe 0%, #f8fafc 40%);
         }
 
@@ -42,6 +42,37 @@
             padding: 2rem;
         }
 
+        /* ================= 語言切換設計 ================= */
+        body.lang-zh .en-text { display: none !important; }
+        body.lang-en .zh-text { display: none !important; }
+
+        .lang-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 8px 16px;
+            border-radius: 999px;
+            cursor: pointer;
+            color: white;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            z-index: 10;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .lang-toggle:hover {
+            background: rgba(255, 255, 255, 0.35);
+            transform: scale(1.05);
+        }
+
+        .lang-toggle .active { color: #93c5fd; text-shadow: 0 0 8px rgba(147, 197, 253, 0.8); }
+        .lang-toggle .inactive { opacity: 0.7; font-weight: 400; }
+
         /* ================= 標頭設計 ================= */
         header {
             background: linear-gradient(135deg, var(--secondary), #0f172a);
@@ -49,13 +80,12 @@
             padding: 4rem 3rem;
             border-radius: 24px;
             margin-bottom: 3rem;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
             position: relative;
             overflow: hidden;
             animation: fadeInDown 0.8s ease-out;
         }
 
-        /* 標頭幾何光暈裝飾 */
         header::after {
             content: '';
             position: absolute;
@@ -91,18 +121,8 @@
             font-size: 0.95rem;
         }
 
-        .contact-info div {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .contact-info a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
+        .contact-info div { display: flex; align-items: center; gap: 0.5rem; }
+        .contact-info a { color: white; text-decoration: none; transition: color 0.3s; }
         .contact-info a:hover { color: #93c5fd; }
 
         /* ================= 共用卡片區塊 ================= */
@@ -112,7 +132,7 @@
             padding: 3rem;
             border-radius: 24px;
             margin-bottom: 2.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.5);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             animation: fadeInUp 0.8s ease-out backwards;
@@ -120,10 +140,9 @@
 
         section:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
         }
 
-        /* 順序進場動畫 */
         section:nth-child(2) { animation-delay: 0.1s; }
         section:nth-child(3) { animation-delay: 0.2s; }
         section:nth-child(4) { animation-delay: 0.3s; }
@@ -140,11 +159,8 @@
         }
 
         .section-title i { color: var(--primary); }
-
         .section-title::after {
-            content: "";
-            flex: 1;
-            height: 2px;
+            content: ""; flex: 1; height: 2px;
             background: linear-gradient(to right, #e2e8f0, transparent);
             margin-left: 1rem;
         }
@@ -159,179 +175,67 @@
         /* ================= Skills ================= */
         .skill-group { margin-bottom: 1.5rem; }
         .skill-group:last-child { margin-bottom: 0; }
-
-        .skill-group-title {
-            font-weight: 600;
-            color: var(--secondary);
-            margin-bottom: 0.75rem;
-            font-size: 1.1rem;
-        }
-
+        .skill-group-title { font-weight: 600; color: var(--secondary); margin-bottom: 0.75rem; font-size: 1.1rem; }
         .skill-tags { display: flex; flex-wrap: wrap; gap: 0.75rem; }
-
         .skill-tag {
-            background: #f1f5f9;
-            color: var(--primary);
-            padding: 0.5rem 1.25rem;
-            border-radius: 9999px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            border: 1px solid #e2e8f0;
+            background: #f1f5f9; color: var(--primary); padding: 0.5rem 1.25rem;
+            border-radius: 9999px; font-size: 0.9rem; font-weight: 500;
+            transition: all 0.3s ease; border: 1px solid #e2e8f0;
         }
-
         .skill-tag:hover {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-            transform: scale(1.05);
+            background: var(--primary); color: white; border-color: var(--primary); transform: scale(1.05);
         }
 
-        /* ================= 時間軸 (工作與學歷) ================= */
-        .timeline {
-            position: relative;
-            padding-left: 2rem;
-        }
-
+        /* ================= 時間軸 ================= */
+        .timeline { position: relative; padding-left: 2rem; }
         .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0; top: 0; bottom: 0;
-            width: 2px;
-            background: #e2e8f0;
+            content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+            width: 2px; background: #e2e8f0;
         }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 2.5rem;
-        }
-
+        .timeline-item { position: relative; margin-bottom: 2.5rem; }
         .timeline-item:last-child { margin-bottom: 0; }
-
         .timeline-dot {
-            position: absolute;
-            left: -2.35rem;
-            top: 0.25rem;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: var(--primary);
-            border: 4px solid white;
+            position: absolute; left: -2.35rem; top: 0.25rem; width: 16px; height: 16px;
+            border-radius: 50%; background: var(--primary); border: 4px solid white;
             box-shadow: 0 0 0 2px var(--primary);
         }
-
-        .timeline-date {
-            font-size: 0.9rem;
-            color: var(--primary);
-            font-weight: 600;
-            margin-bottom: 0.25rem;
-        }
-
-        .timeline-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--secondary);
-            margin-bottom: 0.5rem;
-        }
-
-        .timeline-content { color: var(--text-main); }
-
-        .timeline-content h4 {
-            font-size: 1.05rem;
-            color: var(--secondary);
-            margin: 1rem 0 0.5rem 0;
-        }
-
-        .timeline-content ul {
-            padding-left: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        
+        .timeline-date { font-size: 0.9rem; color: var(--primary); font-weight: 600; margin-bottom: 0.25rem; }
+        .timeline-title { font-size: 1.3rem; font-weight: 700; color: var(--secondary); margin-bottom: 0.5rem; }
+        .timeline-content h4 { font-size: 1.05rem; color: var(--secondary); margin: 1rem 0 0.5rem 0; }
+        .timeline-content ul { padding-left: 1.5rem; margin-bottom: 1rem; }
         .timeline-content li { margin-bottom: 0.25rem; }
 
         /* ================= 專案卡片網格 ================= */
         .project-category { margin-bottom: 2rem; }
-
         .project-category h3 {
-            font-size: 1.2rem;
-            color: var(--accent);
-            margin-bottom: 1rem;
-            border-left: 4px solid var(--accent);
-            padding-left: 0.75rem;
+            font-size: 1.2rem; color: var(--accent); margin-bottom: 1rem;
+            border-left: 4px solid var(--accent); padding-left: 0.75rem;
         }
-
         .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;
         }
-
         .project-card {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            padding: 1.5rem;
-            transition: all 0.3s ease;
+            background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px;
+            padding: 1.5rem; transition: all 0.3s ease;
         }
-
-        .project-card:hover {
-            border-color: var(--primary);
-            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.1);
-        }
-
-        .project-card h4 {
-            font-size: 1.1rem;
-            color: var(--secondary);
-            margin-bottom: 0.75rem;
-        }
-
-        .project-card p {
-            font-size: 0.95rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .project-link {
-            display: inline-block;
-            margin-top: 0.5rem;
-            font-size: 0.9rem;
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
+        .project-card:hover { border-color: var(--primary); box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.1); }
+        .project-card h4 { font-size: 1.1rem; color: var(--secondary); margin-bottom: 0.75rem; }
+        .project-card p { font-size: 0.95rem; margin-bottom: 0.5rem; }
+        .project-link { display: inline-block; margin-top: 0.5rem; font-size: 0.9rem; color: var(--primary); text-decoration: none; font-weight: 500; }
         .project-link:hover { text-decoration: underline; }
 
-        /* ================= 雙欄佈局 (學歷與證書) ================= */
-        .two-column {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-
+        /* ================= 雙欄佈局 ================= */
+        .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
         .cert-list { list-style: none; padding: 0; }
-
         .cert-list li {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 0.75rem;
-            padding: 0.75rem;
-            background: #f8fafc;
-            border-radius: 8px;
-            border-left: 3px solid var(--primary);
+            display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;
+            padding: 0.75rem; background: #f8fafc; border-radius: 8px; border-left: 3px solid var(--primary);
         }
-
         .cert-list i { color: var(--primary); }
 
         /* 動畫 */
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 
         /* 響應式佈局 */
         @media (max-width: 768px) {
@@ -339,17 +243,30 @@
             header h1 { font-size: 2.2rem; }
             section { padding: 2rem 1.5rem; }
             .projects-grid, .two-column { grid-template-columns: 1fr; }
+            .lang-toggle { top: 15px; right: 15px; padding: 6px 12px; font-size: 0.85rem; }
         }
     </style>
 </head>
-<body>
+<!-- 預設語言為中文 -->
+<body class="lang-zh">
 
 <div class="container">
     <!-- ================== 1. 標頭區塊 ================== -->
     <header>
+        <!-- 語言切換按鈕 -->
+        <div class="lang-toggle" onclick="toggleLanguage()">
+            <i class="fas fa-globe"></i>
+            <span id="btn-zh" class="active">中文</span>
+            <span>/</span>
+            <span id="btn-en" class="inactive">EN</span>
+        </div>
+
         <div class="header-content">
-            <h1>王嘉駿 (Terry Wang)</h1>
-            <h2>資料技術 Software Engineer | 巨大機械 (GIANT Group)</h2>
+            <h1>Terry Wang <span class="zh-text">(王嘉駿)</span></h1>
+            <h2>
+                <span class="zh-text">資料技術 Software Engineer | 巨大機械 (GIANT Group)</span>
+                <span class="en-text">Data Technology Software Engineer | GIANT Group</span>
+            </h2>
             <div class="contact-info">
                 <div><i class="fas fa-envelope"></i> <a href="mailto:wangterry88@gmail.com">wangterry88@gmail.com</a></div>
                 <div><i class="fas fa-phone"></i> 0933-574565</div>
@@ -360,20 +277,34 @@
 
     <!-- ================== 2. 關於我 ================== -->
     <section id="about">
-        <h2 class="section-title"><i class="fas fa-user"></i> 關於我 (About Me)</h2>
-        <div class="about-text">
+        <h2 class="section-title"><i class="fas fa-user"></i> 
+            <span class="zh-text">關於我 (About Me)</span>
+            <span class="en-text">About Me</span>
+        </h2>
+        <div class="about-text zh-text">
             <p>我是 Terry，畢業於國立陽明大學 生醫資訊所 與 中國醫藥大學 科技法律所，具備「生醫資訊」與「科技法律」雙碩士背景，致力於將 AI 與自動化技術轉化為企業商業價值。</p>
             <p>在 5 年多的開發職涯中，我經歷了從前瞻醫學研究到工業數位轉型的完整跨度。於醫學中心(中國附醫)任職期間，我專注於 AI 模型研發，成功於 Nature 系列期刊發表 2 篇 AI 預測模型論文，建立嚴謹的數據建模能力；進入業界(巨大機械)後，我將這份邏輯深度轉化為極速的實戰產出，獨立主導並開發多項數位轉型專案，範疇涵蓋 AI 知識庫、SGS 認證之 ESG 平台及工業 IoT 監控系統。</p>
             <p>持有 Azure AI-900、TOEIC 715 及 EMT-1 執照，我是一位兼具法學思維與大數據分析實力的開發者。透過『資訊技術』與『科技法律』的跨域背景，我能精準鎖定痛點，提供符合法規安全性與自動化效率的解決方案，在多變的產業需求中，為企業建構最嚴謹且高效的數位架構。</p>
+        </div>
+        <div class="about-text en-text">
+            <p>I am Terry, holding dual Master's degrees in Biomedical Informatics from National Yang Ming Chiao Tung University and Science and Technology Law from China Medical University. I am dedicated to translating AI and automation technologies into business value.</p>
+            <p>With over 5 years of development experience, my career spans from advanced medical research to industrial digital transformation. During my tenure at China Medical University Hospital, I focused on AI model development, successfully publishing two AI prediction model papers in Nature-affiliated journals, establishing rigorous data modeling capabilities. Upon joining the industry (GIANT Group), I translated this deep logical thinking into rapid, practical outputs, independently leading and developing multiple digital transformation projects, including an AI knowledge base, an SGS-certified ESG platform, and an Industrial IoT monitoring system.</p>
+            <p>Holding Azure AI-900, TOEIC 715, and EMT-1 certifications, I am a developer who combines legal thinking with big data analysis skills. Through my interdisciplinary background in IT and Technology Law, I can accurately pinpoint pain points and provide solutions that meet regulatory compliance, security, and automation efficiency, building the most rigorous and efficient digital architecture for enterprises.</p>
         </div>
     </section>
 
     <!-- ================== 3. 技術專長 ================== -->
     <section id="skills">
-        <h2 class="section-title"><i class="fas fa-laptop-code"></i> 技術專長 (Technical Skills)</h2>
+        <h2 class="section-title"><i class="fas fa-laptop-code"></i> 
+            <span class="zh-text">技術專長 (Technical Skills)</span>
+            <span class="en-text">Technical Skills</span>
+        </h2>
         
         <div class="skill-group">
-            <div class="skill-group-title">後端與架構</div>
+            <div class="skill-group-title">
+                <span class="zh-text">後端與架構</span>
+                <span class="en-text">Backend & Architecture</span>
+            </div>
             <div class="skill-tags">
                 <span class="skill-tag">Asp.Net (C#)</span>
                 <span class="skill-tag">Asp.Net Core</span>
@@ -384,10 +315,13 @@
         </div>
 
         <div class="skill-group">
-            <div class="skill-group-title">雲端與 AI 技術</div>
+            <div class="skill-group-title">
+                <span class="zh-text">雲端與 AI 技術</span>
+                <span class="en-text">Cloud & AI Technologies</span>
+            </div>
             <div class="skill-tags">
-                <span class="skill-tag">Azure AI 服務</span>
-                <span class="skill-tag">LLM 應用整合</span>
+                <span class="skill-tag">Azure AI Services</span>
+                <span class="skill-tag">LLM Integration (GGUF)</span>
                 <span class="skill-tag">Docker</span>
                 <span class="skill-tag">GCP</span>
                 <span class="skill-tag">Oracle Cloud</span>
@@ -395,45 +329,75 @@
         </div>
 
         <div class="skill-group">
-            <div class="skill-group-title">數據工程</div>
+            <div class="skill-group-title">
+                <span class="zh-text">數據工程</span>
+                <span class="en-text">Data Engineering</span>
+            </div>
             <div class="skill-tags">
-                <span class="skill-tag">大數據清洗</span>
-                <span class="skill-tag">自動化 Pipeline</span>
+                <span class="zh-text"><span class="skill-tag">大數據清洗</span> <span class="skill-tag">自動化 Pipeline</span></span>
+                <span class="en-text"><span class="skill-tag">Big Data Cleaning</span> <span class="skill-tag">Automated Pipelines</span></span>
                 <span class="skill-tag">Scikit-learn</span>
-                <span class="skill-tag">機器學習</span>
+                <span class="skill-tag">Machine Learning</span>
             </div>
         </div>
 
         <div class="skill-group">
-            <div class="skill-group-title">工業 4.0</div>
+            <div class="skill-group-title">
+                <span class="zh-text">工業 4.0</span>
+                <span class="en-text">Industry 4.0</span>
+            </div>
             <div class="skill-tags">
-                <span class="skill-tag">SCADA 警報整合</span>
-                <span class="skill-tag">RFID 自動化</span>
-                <span class="skill-tag">SAP API 對接</span>
-                <span class="skill-tag">軟硬體整合佈署</span>
+                <span class="zh-text">
+                    <span class="skill-tag">SCADA 警報整合</span>
+                    <span class="skill-tag">RFID 自動化</span>
+                    <span class="skill-tag">SAP API 對接</span>
+                    <span class="skill-tag">軟硬體整合佈署</span>
+                </span>
+                <span class="en-text">
+                    <span class="skill-tag">SCADA Integration</span>
+                    <span class="skill-tag">RFID Automation</span>
+                    <span class="skill-tag">SAP API Integration</span>
+                    <span class="skill-tag">HW/SW Deployment</span>
+                </span>
             </div>
         </div>
 
         <div class="skill-group">
-            <div class="skill-group-title">法律合規</div>
+            <div class="skill-group-title">
+                <span class="zh-text">法律合規</span>
+                <span class="en-text">Legal Compliance</span>
+            </div>
             <div class="skill-tags">
-                <span class="skill-tag">產品碳足跡 (CBAM/ESG)</span>
-                <span class="skill-tag">貿易合規 (CBP) 數據佐證</span>
-                <span class="skill-tag">資安權限控管</span>
+                <span class="zh-text">
+                    <span class="skill-tag">產品碳足跡 (CBAM/ESG)</span>
+                    <span class="skill-tag">貿易合規 (CBP) 數據佐證</span>
+                    <span class="skill-tag">資安權限控管</span>
+                </span>
+                <span class="en-text">
+                    <span class="skill-tag">Carbon Footprint (CBAM/ESG)</span>
+                    <span class="skill-tag">Trade Compliance (CBP)</span>
+                    <span class="skill-tag">Security Access Control</span>
+                </span>
             </div>
         </div>
     </section>
 
     <!-- ================== 4. 工作經驗 ================== -->
     <section id="experience">
-        <h2 class="section-title"><i class="fas fa-briefcase"></i> 工作經驗 (Experience)</h2>
+        <h2 class="section-title"><i class="fas fa-briefcase"></i> 
+            <span class="zh-text">工作經驗 (Experience)</span>
+            <span class="en-text">Experience</span>
+        </h2>
         <div class="timeline">
             <!-- Job 1 -->
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-date">2025/02 ~ Present</div>
-                <div class="timeline-title">副軟體工程師 | 巨大機械 (GIANT Group)</div>
-                <div class="timeline-content">
+                <div class="timeline-title">
+                    <span class="zh-text">副軟體工程師 | 巨大機械 (GIANT Group)</span>
+                    <span class="en-text">Associate Software Engineer | GIANT Group</span>
+                </div>
+                <div class="timeline-content zh-text">
                     <h4>【核心任務：主導全方位數位轉型】</h4>
                     <ul>
                         <li><strong>開發數位轉型專案：</strong> 涵蓋 AI 應用、ESG 永續、工業 4.0 監控與企業營運管理，成功將廠區傳統流程數位化。</li>
@@ -446,14 +410,30 @@
                         <li><strong>AI 知識庫：</strong> 整合 LLM 技術開發 GTM AI ChatBot，將複雜的人資與技術規範轉化為即時問答服務。</li>
                     </ul>
                 </div>
+                <div class="timeline-content en-text">
+                    <h4>[Core Mission: Leading Comprehensive Digital Transformation]</h4>
+                    <ul>
+                        <li><strong>Digital Transformation Projects:</strong> Covered AI applications, ESG sustainability, Industry 4.0 monitoring, and enterprise operations, successfully digitizing traditional workflows.</li>
+                        <li><strong>Technologies:</strong> Utilized Asp.Net (C#) and Python to implement SAP ERP data integration, IoT device integration, and cloud AI service deployment.</li>
+                    </ul>
+                    <h4>[Key Professional Achievements]</h4>
+                    <ul>
+                        <li><strong>ESG Digitalization:</strong> Built an SGS AUP internationally certified product carbon footprint batch calculation platform, significantly optimizing data accuracy and efficiency.</li>
+                        <li><strong>Trade Compliance:</strong> Leveraged tech-law expertise to develop an "Employee Overtime Survey System" providing evidential data for US CBP trade compliance audits.</li>
+                        <li><strong>AI Knowledge Base:</strong> Integrated LLM technology to develop the GTM AI ChatBot, transforming complex HR and technical regulations into an instant Q&A service.</li>
+                    </ul>
+                </div>
             </div>
 
             <!-- Job 2 -->
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-date">2021/03 ~ 2025/01</div>
-                <div class="timeline-title">助理研發工程師 | 中國醫藥大學附設醫院</div>
-                <div class="timeline-content">
+                <div class="timeline-title">
+                    <span class="zh-text">助理研發工程師 | 中國醫藥大學附設醫院</span>
+                    <span class="en-text">Assistant R&D Engineer | China Medical University Hospital</span>
+                </div>
+                <div class="timeline-content zh-text">
                     <h4>【核心任務：AI 模型研發與學術實踐】</h4>
                     <ul>
                         <li><strong>頂尖學術成就：</strong> 任職期間專注 AI 模型開發，研究成果發表於《Nature Communications》與《Scientific Reports》等國際權威期刊。</li>
@@ -465,105 +445,207 @@
                         <li><strong>機器學習實踐：</strong> 運用 Python (Scikit-learn) 構建監督式與非監督式學習模型，精準識別臨床高風險生物標記。</li>
                     </ul>
                 </div>
+                <div class="timeline-content en-text">
+                    <h4>[Core Mission: AI Model R&D and Academic Practice]</h4>
+                    <ul>
+                        <li><strong>Academic Achievements:</strong> Focused on AI model development, publishing research in top international journals like Nature Communications and Scientific Reports.</li>
+                        <li><strong>Data Engineering:</strong> Processed massive medical imaging and genomic big data, establishing high-performance feature fusion algorithms.</li>
+                    </ul>
+                    <h4>[Cloud Architecture & Automation]</h4>
+                    <ul>
+                        <li><strong>Azure Deployment:</strong> Built the "Genetic Risk Automated Calculation Service (PGS Catalog)" from scratch, establishing a complete pipeline from data to prediction reports.</li>
+                        <li><strong>Machine Learning:</strong> Utilized Python (Scikit-learn) to build supervised and unsupervised learning models, accurately identifying high-risk clinical biomarkers.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- ================== 5. 專案經歷 ================== -->
     <section id="projects">
-        <h2 class="section-title"><i class="fas fa-project-diagram"></i> 專案經歷 (Projects)</h2>
+        <h2 class="section-title"><i class="fas fa-project-diagram"></i> 
+            <span class="zh-text">專案經歷 (Projects)</span>
+            <span class="en-text">Projects</span>
+        </h2>
         
         <!-- 專案分類 1 -->
         <div class="project-category">
-            <h3>類別一：工業數位轉型實績 (Industrial Digital Transformation)</h3>
+            <h3>
+                <span class="zh-text">類別一：工業數位轉型實績</span>
+                <span class="en-text">Category 1: Industrial Digital Transformation</span>
+            </h3>
             <div class="projects-grid">
                 <div class="project-card">
-                    <h4>1. 產品碳足跡批量計算平台</h4>
-                    <p><strong>描述：</strong>整合 C#、Python 與 SQL Server 建構獲 SGS AUP 國際認證之自動化碳盤查批量計算平台。</p>
-                    <p><strong>技術：</strong>Asp.Net (C#), Python, SQL Server</p>
-                    <p><strong>成就：</strong>成功建構獲 SGS 認證之計算架構，大幅提升碳盤查自動化效率。</p>
+                    <h4>
+                        <span class="zh-text">1. 產品碳足跡批量計算平台</span>
+                        <span class="en-text">1. Product Carbon Footprint Platform</span>
+                    </h4>
+                    <p class="zh-text"><strong>描述：</strong>整合 C#、Python 與 SQL Server 建構獲 SGS AUP 國際認證之自動化碳盤查平台。</p>
+                    <p class="en-text"><strong>Description:</strong> Integrated C#, Python, and SQL Server to build an SGS AUP certified automated carbon footprint calculation platform.</p>
+                    <p><strong>Tech:</strong> Asp.Net (C#), Python, SQL Server</p>
                 </div>
                 <div class="project-card">
-                    <h4>2. GTM AI ChatBOT 企業知識庫系統</h4>
-                    <p><strong>描述：</strong>結合 ASP.Net 與 LLM 模型，將複雜的人資、法規與技術規範轉化為即時問答服務。</p>
-                    <p><strong>技術：</strong>Asp.Net Core, LLM (GGUF)</p>
-                    <p><strong>成就：</strong>實現企業內部知識管理自動化，縮短員工查閱文件時間。</p>
+                    <h4>
+                        <span class="zh-text">2. GTM AI ChatBOT 企業知識庫系統</span>
+                        <span class="en-text">2. GTM AI ChatBOT Knowledge Base</span>
+                    </h4>
+                    <p class="zh-text"><strong>描述：</strong>結合 ASP.Net 與 LLM 模型，將複雜的人資、法規與技術規範轉化為即時問答服務。</p>
+                    <p class="en-text"><strong>Description:</strong> Combined ASP.Net with LLM models to transform complex HR and technical specs into an instant Q&A service.</p>
+                    <p><strong>Tech:</strong> Asp.Net Core, LLM (GGUF)</p>
                 </div>
                 <div class="project-card">
-                    <h4>3. 員工加班意願調查系統 (CBP 合規)</h4>
-                    <p><strong>描述：</strong>針對美國 CBP 貿易風險開發具法律證據力之數據採集系統。</p>
-                    <p><strong>技術：</strong>Asp.Net (C#), 數位簽核邏輯</p>
-                    <p><strong>成就：</strong>結合科技法律專業確保數據完整不可篡改性，協助企業通過審核。</p>
+                    <h4>
+                        <span class="zh-text">3. 員工加班意願調查系統 (CBP 合規)</span>
+                        <span class="en-text">3. Overtime Survey System (CBP Compliance)</span>
+                    </h4>
+                    <p class="zh-text"><strong>描述：</strong>針對美國 CBP 貿易風險開發具法律證據力之數據採集系統。</p>
+                    <p class="en-text"><strong>Description:</strong> Developed an evidentiary data collection system targeting US CBP trade risks.</p>
+                    <p><strong>Tech:</strong> Asp.Net (C#), Digital Signatures</p>
                 </div>
                 <div class="project-card">
-                    <h4>4. 工業 4.0 現場監控與自動化工具組</h4>
-                    <p><strong>描述：</strong>涵蓋 SCADA 即時告警、RFID 工時系統與 Barcode 數位移轉單。</p>
-                    <p><strong>技術：</strong>Python, IoT 整合, Raspberry Pi</p>
-                    <p><strong>成就：</strong>全面數位化生產現場數據採集，取代傳統紙本作業。</p>
+                    <h4>
+                        <span class="zh-text">4. 工業 4.0 現場監控與自動化工具組</span>
+                        <span class="en-text">4. Industry 4.0 Automation Tools</span>
+                    </h4>
+                    <p class="zh-text"><strong>描述：</strong>涵蓋 SCADA 即時告警、RFID 工時系統與 Barcode 數位移轉單。</p>
+                    <p class="en-text"><strong>Description:</strong> Covered SCADA alerts, RFID time systems, and Barcode digital transfer tickets.</p>
+                    <p><strong>Tech:</strong> Python, IoT Integration, Raspberry Pi</p>
                 </div>
             </div>
         </div>
 
         <!-- 專案分類 2 -->
         <div class="project-category">
-            <h3>類別二：前瞻研發與學術成果 (Advanced R&D & Publications)</h3>
+            <h3>
+                <span class="zh-text">類別二：前瞻研發與學術成果</span>
+                <span class="en-text">Category 2: Advanced R&D & Publications</span>
+            </h3>
             <div class="projects-grid">
                 <div class="project-card">
-                    <h4>1. PRS 多基因疾病風險預測模型</h4>
-                    <p><strong>描述：</strong>使用多基因分數預測 457 種表型遺傳易感性，實現個人化預防醫療。</p>
-                    <p><strong>技術：</strong>R, PRSice-2 (49 種表型 AUC > 0.8)</p>
-                    <a href="https://www.nature.com/articles/s41467-024-47472-5" target="_blank" class="project-link">查看論文 (Nature Communications) <i class="fas fa-external-link-alt"></i></a>
+                    <h4>
+                        <span class="zh-text">1. PRS 多基因疾病風險預測模型</span>
+                        <span class="en-text">1. Polygenic Disease Risk Prediction</span>
+                    </h4>
+                    <p class="zh-text"><strong>描述：</strong>預測 457 種表型遺傳易感性，實現個人化預防醫療。</p>
+                    <p class="en-text"><strong>Description:</strong> Predicted 457 phenotypic genetic susceptibilities for personalized preventive medicine.</p>
+                    <a href="https://www.nature.com/articles/s41467-024-47472-5" target="_blank" class="project-link">Nature Communications <i class="fas fa-external-link-alt"></i></a>
                 </div>
                 <div class="project-card">
-                    <h4>2. Azure 基因風險查詢與可視化平台</h4>
-                    <p><strong>描述：</strong>開發並於 Azure 部署整合基因與臨床數據的查詢系統，提供醫師風險評分參考。</p>
-                    <p><strong>技術：</strong>雲端網頁部署、數據圖表化</p>
-                    <a href="https://pgscatalog.azure.nihxcmuh.org/#/" target="_blank" class="project-link">查看平台連結 <i class="fas fa-external-link-alt"></i></a>
+                    <h4>
+                        <span class="zh-text">2. Azure 基因風險查詢與可視化平台</span>
+                        <span class="en-text">2. Azure Genetic Risk Query Platform</span>
+                    </h4>
+                    <p class="zh-text"><strong>描述：</strong>部署整合基因與臨床數據的查詢系統，提供醫師風險評分參考。</p>
+                    <p class="en-text"><strong>Description:</strong> Deployed a query system integrating genetic and clinical data on Azure for physicians.</p>
+                    <a href="https://pgscatalog.azure.nihxcmuh.org/#/" target="_blank" class="project-link">Platform Link <i class="fas fa-external-link-alt"></i></a>
                 </div>
                 <div class="project-card">
-                    <h4>3. 大動脈硬化預測與生物標記識別</h4>
-                    <p><strong>描述：</strong>運用 Scikit-Learn 與 RFE 特徵選擇方法，分析大動脈粥樣硬化 (LAA) 數據。</p>
-                    <p><strong>技術：</strong>構建 AUC 0.93 之預測模型</p>
-                    <a href="https://www.nature.com/articles/s41598-023-42338-0" target="_blank" class="project-link">查看論文 (Scientific Reports) <i class="fas fa-external-link-alt"></i></a>
+                    <h4>
+                        <span class="zh-text">3. 大動脈硬化預測與生物標記識別</span>
+                        <span class="en-text">3. Atherosclerosis Prediction</span>
+                    </h4>
+                    <p class="zh-text"><strong>描述：</strong>分析大動脈粥樣硬化數據，構建 AUC 0.93 之預測模型。</p>
+                    <p class="en-text"><strong>Description:</strong> Analyzed Large Artery Atherosclerosis data, building a prediction model with AUC 0.93.</p>
+                    <a href="https://www.nature.com/articles/s41598-023-42338-0" target="_blank" class="project-link">Scientific Reports <i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ================== 6. 學歷與證書 (雙欄佈局) ================== -->
+    <!-- ================== 6. 學歷與證書 ================== -->
     <div class="two-column">
         <!-- 學歷 -->
         <section id="education" style="margin-bottom: 0;">
-            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> 學歷 (Education)</h2>
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> 
+                <span class="zh-text">學歷 (Education)</span>
+                <span class="en-text">Education</span>
+            </h2>
             <div class="timeline" style="margin-top: 2rem;">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-date">2023 - 2024</div>
-                    <div class="timeline-title" style="font-size: 1.1rem;">科技法律碩士學位學程</div>
-                    <div class="timeline-content">中國醫藥大學</div>
+                    <div class="timeline-title" style="font-size: 1.1rem;">
+                        <span class="zh-text">科技法律碩士學位學程</span>
+                        <span class="en-text">M.S. in Science and Technology Law</span>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="zh-text">中國醫藥大學</span>
+                        <span class="en-text">China Medical University</span>
+                    </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-date">2018 - 2020</div>
-                    <div class="timeline-title" style="font-size: 1.1rem;">生物醫學資訊研究所 碩士</div>
-                    <div class="timeline-content">國立陽明交通大學 (原陽明大學)</div>
+                    <div class="timeline-title" style="font-size: 1.1rem;">
+                        <span class="zh-text">生物醫學資訊研究所 碩士</span>
+                        <span class="en-text">M.S. in Biomedical Informatics</span>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="zh-text">國立陽明交通大學</span>
+                        <span class="en-text">National Yang Ming Chiao Tung University</span>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- 證書 -->
         <section id="certifications" style="margin-bottom: 0;">
-            <h2 class="section-title"><i class="fas fa-award"></i> 專業證書 (Certifications)</h2>
+            <h2 class="section-title"><i class="fas fa-award"></i> 
+                <span class="zh-text">專業證書 (Certifications)</span>
+                <span class="en-text">Certifications</span>
+            </h2>
             <ul class="cert-list">
-                <li><i class="fas fa-certificate"></i> Azure 人工智慧基礎認證 (AI-900 數位證書)</li>
-                <li><i class="fas fa-certificate"></i> 醫學資訊管理師</li>
-                <li><i class="fas fa-certificate"></i> 電腦軟體丙級技術士</li>
-                <li><i class="fas fa-language"></i> TOEIC 英語測驗 715 分</li>
-                <li><i class="fas fa-heartbeat"></i> EMT-1 緊急救護技術員執照</li>
+                <li><i class="fas fa-certificate"></i> 
+                    <span class="zh-text">Azure 人工智慧基礎認證 (AI-900)</span>
+                    <span class="en-text">Azure AI Fundamentals (AI-900)</span>
+                </li>
+                <li><i class="fas fa-certificate"></i> 
+                    <span class="zh-text">醫學資訊管理師</span>
+                    <span class="en-text">Medical Informatics Manager</span>
+                </li>
+                <li><i class="fas fa-certificate"></i> 
+                    <span class="zh-text">電腦軟體丙級技術士</span>
+                    <span class="en-text">Computer Software Technician Level C</span>
+                </li>
+                <li><i class="fas fa-language"></i> 
+                    <span class="zh-text">TOEIC 英語測驗 715 分</span>
+                    <span class="en-text">TOEIC English Test 715</span>
+                </li>
+                <li><i class="fas fa-heartbeat"></i> 
+                    <span class="zh-text">EMT-1 緊急救護技術員執照</span>
+                    <span class="en-text">EMT-1 Emergency Medical Technician</span>
+                </li>
             </ul>
         </section>
     </div>
 </div>
+
+<!-- ================== JavaScript 語言切換邏輯 ================== -->
+<script>
+    function toggleLanguage() {
+        const body = document.body;
+        const btnZh = document.getElementById('btn-zh');
+        const btnEn = document.getElementById('btn-en');
+        
+        if (body.classList.contains('lang-zh')) {
+            // 切換至英文
+            body.classList.remove('lang-zh');
+            body.classList.add('lang-en');
+            btnZh.classList.remove('active');
+            btnZh.classList.add('inactive');
+            btnEn.classList.remove('inactive');
+            btnEn.classList.add('active');
+        } else {
+            // 切換至中文
+            body.classList.remove('lang-en');
+            body.classList.add('lang-zh');
+            btnEn.classList.remove('active');
+            btnEn.classList.add('inactive');
+            btnZh.classList.remove('inactive');
+            btnZh.classList.add('active');
+        }
+    }
+</script>
 
 </body>
 </html>
