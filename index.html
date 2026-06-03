@@ -125,6 +125,23 @@
         .contact-info a { color: white; text-decoration: none; transition: color 0.3s; }
         .contact-info a:hover { color: #93c5fd; }
 
+        /* ================= 大頭貼設計 ================= */
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(255, 255, 255, 0.4);
+            margin-bottom: 1.5rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease;
+        }
+        .profile-img:hover {
+            transform: scale(1.05) rotate(2deg);
+            border-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+        }
+
         /* ================= 共用卡片區塊 ================= */
         section {
             background: var(--card-bg);
@@ -260,8 +277,11 @@
             <span>/</span>
             <span id="btn-en" class="inactive">EN</span>
         </div>
-
         <div class="header-content">
+            <!-- 🌟 新增的大頭貼圖片 -->
+            <!-- src 請填入您剛上傳的圖片檔名，例如 profile.jpg -->
+            <!-- onerror 是一個安全機制：如果找不到圖片，會自動產生一個有您姓名縮寫的藍色圓形代替 -->
+            <img src="profile.jpg" alt="Terry Wang" class="profile-img" onerror="this.src='https://ui-avatars.com/api/?name=Terry+Wang&size=150&background=0ea5e9&color=fff&bold=true'">
             <h1>Terry Wang <span class="zh-text">(王嘉駿)</span></h1>
             <h2>
                 <span class="zh-text">資料技術 Software Engineer | 巨大機械 (GIANT Group)</span>
