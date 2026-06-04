@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terry Wang (王嘉駿) - Resume. Experience, Education and Certifications.">
+    <title>Terry Wang - 專業履歷 / Resume</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="lang-zh">
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-brand">Terry Wang</div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link"><span class="zh-text">首頁</span><span class="en-text">Home</span></a>
+            <a href="resume.html" class="nav-link"><span class="zh-text">專業履歷</span><span class="en-text">Resume</span></a>
+            <a href="portfolio.html" class="nav-link"><span class="zh-text">作品集</span><span class="en-text">Portfolio</span></a>
+        </div>
+        <div class="lang-toggle" onclick="toggleLanguage()">
+            <i class="fas fa-globe"></i>
+            <span id="btn-zh" class="active">中文</span>
+            <span>/</span>
+            <span id="btn-en" class="inactive">EN</span>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <!-- 下載 PDF 按鈕 -->
+    <div style="text-align: right; margin-bottom: 1.5rem;">
+        <a href="./files/TerryWang-Resume.pdf" download target="_blank" class="btn-primary" style="background-color: #ef4444; border-color: #ef4444; padding: 0.6rem 1.2rem; font-size: 0.95rem; box-shadow: 0 4px 6px rgba(239, 68, 68, 0.25);">
+            <i class="fas fa-file-pdf"></i> <span class="zh-text">下載 PDF 履歷</span><span class="en-text">Download PDF Resume</span>
+        </a>
+    </div>
+
+    <!-- ================== 工作經驗 ================== -->
+    <section id="experience">
+        <h2 class="section-title"><i class="fas fa-briefcase"></i> 
+            <span class="zh-text">工作經驗 (Experience)</span>
+            <span class="en-text">Experience</span>
+        </h2>
+        <div class="timeline">
+            <!-- Job 1 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2025/02 ~ Present</div>
+                <div class="timeline-title">
+                    <span class="zh-text">副軟體工程師 | 巨大機械 (GIANT Group)</span>
+                    <span class="en-text">Associate Software Engineer | GIANT Group</span>
+                </div>
+                <div class="timeline-content zh-text">
+                    <h4>【核心任務：主導全方位數位轉型】</h4>
+                    <ul>
+                        <li><strong>開發數位轉型專案：</strong> 涵蓋 AI 應用、ESG 永續、工業 4.0 監控與企業營運管理，成功將廠區傳統流程數位化。</li>
+                        <li><strong>技術使用：</strong> 運用 Asp.Net (C#) 與 Python 進行開發，實現 SAP ERP 資料對接、IoT 設備整合與雲端 AI 服務部署。</li>
+                    </ul>
+                    <h4>【指標性專業實績】</h4>
+                    <ul>
+                        <li><strong>ESG 數位化：</strong> 建構獲 SGS AUP 國際認證之產品碳足跡批量計算平台，大幅優化數據精準度與報表產出效率。</li>
+                        <li><strong>貿易合規治理：</strong> 結合科技法律專業，開發「員工加班意願調查系統」，提供具證據力之數據佐證，助企業通過美國 CBP 貿易合規審核。</li>
+                        <li><strong>AI 知識庫：</strong> 整合 LLM 技術開發 GTM AI ChatBot，將複雜的人資與技術規範轉化為即時問答服務。</li>
+                    </ul>
+                </div>
+                <div class="timeline-content en-text">
+                    <h4>[Core Mission: Leading Comprehensive Digital Transformation]</h4>
+                    <ul>
+                        <li><strong>Digital Transformation Projects:</strong> Covered AI applications, ESG sustainability, Industry 4.0 monitoring, and enterprise operations, successfully digitizing traditional workflows.</li>
+                        <li><strong>Technologies:</strong> Utilized Asp.Net (C#) and Python to implement SAP ERP data integration, IoT device integration, and cloud AI service deployment.</li>
+                    </ul>
+                    <h4>[Key Professional Achievements]</h4>
+                    <ul>
+                        <li><strong>ESG Digitalization:</strong> Built an SGS AUP internationally certified product carbon footprint batch calculation platform, significantly optimizing data accuracy and efficiency.</li>
+                        <li><strong>Trade Compliance:</strong> Leveraged tech-law expertise to develop an "Employee Overtime Survey System" providing evidential data for US CBP trade compliance audits.</li>
+                        <li><strong>AI Knowledge Base:</strong> Integrated LLM technology to develop the GTM AI ChatBot, transforming complex HR and technical regulations into an instant Q&A service.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Job 2 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2021/03 ~ 2025/01</div>
+                <div class="timeline-title">
+                    <span class="zh-text">助理研發工程師 | 中國醫藥大學附設醫院</span>
+                    <span class="en-text">Assistant R&D Engineer | China Medical University Hospital</span>
+                </div>
+                <div class="timeline-content zh-text">
+                    <h4>【核心任務：AI 模型研發與學術實踐】</h4>
+                    <ul>
+                        <li><strong>頂尖學術成就：</strong> 任職期間專注 AI 模型開發，研究成果發表於《Nature Communications》與《Scientific Reports》等國際權威期刊。</li>
+                        <li><strong>大數據工程：</strong> 負責處理海量醫學影像與基因大數據，建立高效能影像特徵融合演算法。</li>
+                    </ul>
+                    <h4>【雲端架構與自動化】</h4>
+                    <ul>
+                        <li><strong>Azure 雲端部署：</strong> 從無到有建置「基因風險自動化運算服務 (PGS Catalog)」，實現數據採集至預測報告之完整流程。</li>
+                        <li><strong>機器學習實踐：</strong> 運用 Python (Scikit-learn) 構建監督式與非監督式學習模型，精準識別臨床高風險生物標記。</li>
+                    </ul>
+                </div>
+                <div class="timeline-content en-text">
+                    <h4>[Core Mission: AI Model R&D and Academic Practice]</h4>
+                    <ul>
+                        <li><strong>Academic Achievements:</strong> Focused on AI model development, publishing research in top international journals like Nature Communications and Scientific Reports.</li>
+                        <li><strong>Data Engineering:</strong> Processed massive medical imaging and genomic big data, establishing high-performance feature fusion algorithms.</li>
+                    </ul>
+                    <h4>[Cloud Architecture & Automation]</h4>
+                    <ul>
+                        <li><strong>Azure Deployment:</strong> Built the "Genetic Risk Automated Calculation Service (PGS Catalog)" from scratch, establishing a complete pipeline from data to prediction reports.</li>
+                        <li><strong>Machine Learning:</strong> Utilized Python (Scikit-learn) to build supervised and unsupervised learning models, accurately identifying high-risk clinical biomarkers.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================== 學歷與證書 ================== -->
+    <div class="two-column">
+        <!-- 學歷 -->
+        <section id="education" style="margin-bottom: 0;">
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> 
+                <span class="zh-text">學歷 (Education)</span>
+                <span class="en-text">Education</span>
+            </h2>
+            <div class="timeline" style="margin-top: 2rem;">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2023 - 2024</div>
+                    <div class="timeline-title" style="font-size: 1.1rem;">
+                        <span class="zh-text">科技法律碩士學位學程</span>
+                        <span class="en-text">M.S. in Science and Technology Law</span>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="zh-text">中國醫藥大學</span>
+                        <span class="en-text">China Medical University</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2018 - 2020</div>
+                    <div class="timeline-title" style="font-size: 1.1rem;">
+                        <span class="zh-text">生物醫學資訊研究所 碩士</span>
+                        <span class="en-text">M.S. in Biomedical Informatics</span>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="zh-text">國立陽明交通大學</span>
+                        <span class="en-text">National Yang Ming Chiao Tung University</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 證書 -->
+        <section id="certifications" style="margin-bottom: 0;">
+            <h2 class="section-title"><i class="fas fa-award"></i> 
+                <span class="zh-text">專業證書 (Certifications)</span>
+                <span class="en-text">Certifications</span>
+            </h2>
+            <ul class="cert-list">
+                <li><i class="fas fa-certificate"></i> 
+                    <span class="zh-text">Azure 人工智慧基礎認證 (AI-900)</span>
+                    <span class="en-text">Azure AI Fundamentals (AI-900)</span>
+                </li>
+                <li><i class="fas fa-certificate"></i> 
+                    <span class="zh-text">醫學資訊管理師</span>
+                    <span class="en-text">Medical Informatics Manager</span>
+                </li>
+                <li><i class="fas fa-certificate"></i> 
+                    <span class="zh-text">電腦軟體丙級技術士</span>
+                    <span class="en-text">Computer Software Technician Level C</span>
+                </li>
+                <li><i class="fas fa-language"></i> 
+                    <span class="zh-text">TOEIC 英語測驗 715 分</span>
+                    <span class="en-text">TOEIC English Test 715</span>
+                </li>
+                <li><i class="fas fa-heartbeat"></i> 
+                    <span class="zh-text">EMT-1 緊急救護技術員執照</span>
+                    <span class="en-text">EMT-1 Emergency Medical Technician</span>
+                </li>
+            </ul>
+        </section>
+    </div>
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terry Wang (王嘉駿) - Portfolio. Featured projects in Digital Transformation and AI Research.">
+    <title>Terry Wang - 作品集 / Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="lang-zh">
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-brand">Terry Wang</div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link"><span class="zh-text">首頁</span><span class="en-text">Home</span></a>
+            <a href="resume.html" class="nav-link"><span class="zh-text">專業履歷</span><span class="en-text">Resume</span></a>
+            <a href="portfolio.html" class="nav-link"><span class="zh-text">作品集</span><span class="en-text">Portfolio</span></a>
+        </div>
+        <div class="lang-toggle" onclick="toggleLanguage()">
+            <i class="fas fa-globe"></i>
+            <span id="btn-zh" class="active">中文</span>
+            <span>/</span>
+            <span id="btn-en" class="inactive">EN</span>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <section id="projects">
+        <h2 class="section-title"><i class="fas fa-project-diagram"></i> 
+            <span class="zh-text">作品集 (Portfolio)</span>
+            <span class="en-text">Portfolio</span>
+        </h2>
+        
+        <!-- 大類別一：工業數位轉型實績 -->
+        <div class="project-main-category">
+            <h2 class="main-category-title">
+                <span class="zh-text">類別一：工業數位轉型實績</span>
+                <span class="en-text">Category 1: Industrial Digital Transformation</span>
+            </h2>
+
+            <!-- 領域一 -->
+            <div class="project-category">
+                <h3>
+                    <span class="zh-text">領域一：AI 與永續數位化</span>
+                    <span class="en-text">Domain 1: AI & Sustainability</span>
+                </h3>
+                <div class="projects-grid">
+                    <!-- Card 1: AI Chatbot -->
+                    <div class="project-card">
+                        <div class="project-img-placeholder">
+                            <i class="fas fa-robot"></i>
+                            <img src="./images/Project-A1-01-GTMAI.png" alt="AI Chatbot" onerror="this.style.display='none'">
+                        </div>
+                        <div class="project-content">
+                            <h4>
+                                <span class="zh-text">GTM AI ChatBOT 知識庫系統</span>
+                                <span class="en-text">GTM AI ChatBOT Knowledge Base</span>
+                            </h4>
+                            <p class="zh-text"><strong>描述：</strong>結合 ASP.Net 與 LLM 模型，將複雜的人資、法規與技術規範轉化為即時問答服務。</p>
+                            <p class="en-text"><strong>Description:</strong> Combined ASP.Net with LLM models to transform complex HR and technical specs into an instant Q&A service.</p>
+                            <span class="skill-tag" style="margin-top:auto; width:fit-content; margin-bottom: 1rem;">Asp.Net Core, LLM</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: ESG -->
+                    <div class="project-card">
+                        <div class="project-img-placeholder">
+                            <i class="fas fa-leaf"></i>
+                            <img src="./images/Project-A1-02-ESG.png" alt="ESG Project" onerror="this.style.display='none'">
+                        </div>
+                        <div class="project-content">
+                            <h4>
+                                <span class="zh-text">產品碳足跡計算平台 <span style="font-size:0.85em; color:var(--primary);">(SGS認證)</span></span>
+                                <span class="en-text">Product Carbon Footprint Platform</span>
+                            </h4>
+                            <p class="zh-text"><strong>描述：</strong>整合 C#、Python 與 SQL Server 建構獲 SGS AUP 國際認證之自動化碳盤查平台。</p>
+                            <p class="en-text"><strong>Description:</strong> Integrated C#, Python, and SQL Server to build an SGS AUP certified automated carbon footprint calculation platform.</p>
+                            <span class="skill-tag" style="margin-top:auto; width:fit-content; margin-bottom: 1rem;">Asp.Net (C#), Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 領域二 -->
+            <div class="project-category">
+                <h3>
+                    <span class="zh-text">領域二：工業 4.0 監控與採集</span>
+                    <span class="en-text">Domain 2: Industrial IoT</span>
+                </h3>
+                <div class="projects-grid">
+                    <!-- Card 3: SCADA -->
+                    <div class="project-card">
+                        <div class="project-img-placeholder">
+                            <i class="fas fa-desktop"></i>
+                            <img src="./images/Project-A2-01-SCADA.png" alt="SCADA" onerror="this.style.display='none'">
+                        </div>
+                        <div class="project-content">
+                            <h4>
+                                <span class="zh-text">SCADA 即時告警系統</span>
+                                <span class="en-text">SCADA Real-time Alert System</span>
+                            </h4>
+                            <p class="zh-text"><strong>描述：</strong>針對生產機台與廠務設備進行即時數據採集與異常監控告警。</p>
+                            <p class="en-text"><strong>Description:</strong> Real-time data acquisition and anomaly monitoring alerts for production machines and facility equipment.</p>
+                            <span class="skill-tag" style="margin-top:auto; width:fit-content; margin-bottom: 1rem;">Python, IoT Integration</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: RFID -->
+                    <div class="project-card">
+                        <div class="project-img-placeholder">
+                            <i class="fas fa-microchip"></i>
+                            <img src="./images/Project-A2-02-RFID.png" alt="RFID" onerror="this.style.display='none'">
+                        </div>
+                        <div class="project-content">
+                            <h4>
+                                <span class="zh-text">RFID 數位工時紀錄系統</span>
+                                <span class="en-text">RFID Process & Time Tracking</span>
+                            </h4>
+                            <p class="zh-text"><strong>描述：</strong>結合 RFID 技術實現自動化工時紀錄與製程進度管控。</p>
+                            <p class="en-text"><strong>Description:</strong> Integrated RFID technology for automated working hour recording and process progress control.</p>
+                            <span class="skill-tag" style="margin-top:auto; width:fit-content; margin-bottom: 1rem;">Hardware Integration, C#</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 領域三 -->
+            <div class="project-category">
+                <h3>
+                    <span class="zh-text">領域三：現場數位化工具組</span>
+                    <span class="en-text">Domain 3: Field Digital Tools</span>
+                </h3>
+                <div class="projects-grid">
+                    <!-- Card 5: Barcode -->
+                    <div class="project-card">
+                        <div class="project-img-placeholder">
+                            <i class="fas fa-barcode"></i>
+                            <img src="./images/Project-A3-01-toolkit.png" alt="toolkit" onerror="this.style.display='none'">
+                        </div>
+                        <div class="project-content">
+                            <h4>
+                                <span class="zh-text">生產移轉單數位化 (Barcode)</span>
+                                <span class="en-text">Digital Transfer Tickets (Barcode)</span>
+                            </h4>
+                            <p class="zh-text"><strong>描述：</strong>應用條碼標籤取代傳統紙本，實現生產流程與物料移轉的全程數位追蹤。</p>
+                            <p class="en-text"><strong>Description:</strong> Replaced traditional paper tickets with barcode labels for full digital tracking of production workflows.</p>
+                            <span class="skill-tag" style="margin-top:auto; width:fit-content; margin-bottom: 1rem;">Raspberry Pi, API</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: 塗裝品質 -->
+                    <div class="project-card">
+                        <div class="project-img-placeholder">
+                            <i class="fas fa-paint-roller"></i>
+                            <img src="./images/Project-A3-02-PTTouch.png" alt="Painting" onerror="this.style.display='none'">
+                        </div>
+                        <div class="project-content">
+                            <h4>
+                                <span class="zh-text">塗裝品質不良紀錄系統</span>
+                                <span class="en-text">Painting Quality Defect Record System</span>
+                            </h4>
+                            <p class="zh-text"><strong>描述：</strong>為現場產線客製化開發之觸控螢幕/平板應用，快速登錄並分析塗裝不良數據。</p>
+                            <p class="en-text"><strong>Description:</strong> Touchscreen/tablet application customized for production lines to quickly record and analyze painting defects.</p>
+                            <span class="skill-tag" style="margin-top:auto; width:fit-content; margin-bottom: 1rem;">Web UI/UX, Touch</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 領域四 -->
+            <div class="project-category">
+                <h3>
+                    <span class="zh-text">領域四：營運管理與流程合規</span>
+                    <span class="en-text">Domain 4: Compliance & Operations</span>
+                </h3>
+                <div class="projects-grid">
+                    <!-- Card 7: Overtime -->
+                    <div class="project-card">
+                        <div class="project-img-placeholder">
+                            <i class="fas fa-balance-scale"></i>
+                            <img src="./images/Project-A4-01-Overtime.png" alt="Overtime" onerror="this.style.display='none'">
+                        </div>
+                        <div class="project-content">
+                            <h4>
+                                <span class="zh-text">員工加班意願調查系統</span>
+                                <span class="en-text">Employee Overtime Survey System</span>
+                            </h4>
+                            <p class="zh-text"><strong>描述：</strong>針對美國 CBP 貿易風險開發具法律證據力之數據採集系統。</p>
+                            <p class="en-text"><strong>Description:</strong> Developed an evidentiary data collection system targeting US CBP trade compliance risks.</p>
+                            <span class="skill-tag" style="margin-top:auto; width:fit-content; margin-bottom: 1rem;">Asp.Net (C#), Digital Signatures</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 8: 塗裝簽核 -->
+                    <div class="project-card">
+                        <div class="project-img-placeholder">
+                            <i class="fas fa-file-signature"></i>
+                            <img src="./images/Project-A4-02-PiantFlow.png" alt="PiantFlow" onerror="this.style.display='none'">
+                        </div>
+                        <div class="project-content">
+                            <h4>
+                                <span class="zh-text">塗裝程序圖簽核系統</span>
+                                <span class="en-text">Process Flow Approval & Version Control</span>
+                            </h4>
+                            <p class="zh-text"><strong>描述：</strong>將塗裝流程文件簽核數位化，並實現嚴格的版本控管與追蹤。</p>
+                            <p class="en-text"><strong>Description:</strong> Digitized Painting document approvals, implementing strict version control and historical tracking.</p>
+                            <span class="skill-tag" style="margin-top:auto; width:fit-content; margin-bottom: 1rem;">Workflow Automation, SQL</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 9: PC 能力評價 -->
+                    <div class="project-card">
+                        <div class="project-img-placeholder">
+                            <i class="fas fa-clipboard-check"></i>
+                            <img src="./images/Project-A4-03-PCcheck.png" alt="PCcheck" onerror="this.style.display='none'">
+                        </div>
+                        <div class="project-content">
+                            <h4>
+                                <span class="zh-text">PC 工程能力評價系統</span>
+                                <span class="en-text">Engineering Competence Evaluation</span>
+                            </h4>
+                            <p class="zh-text"><strong>描述：</strong>將工作中心的能力考核流程全面數位化，提升評鑑客觀性與效率。</p>
+                            <p class="en-text"><strong>Description:</strong> Fully digitized the competence assessment process for engineering station, improving efficiency.</p>
+                            <span class="skill-tag" style="margin-top:auto; width:fit-content; margin-bottom: 1rem;">Web Application, Data Analytics</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 10: 教育訓練 -->
+                    <div class="project-card">
+                        <div class="project-img-placeholder">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <img src="./images/Project-A4-04-EmpTrain.png" alt="EmpTrain" onerror="this.style.display='none'">
+                        </div>
+                        <div class="project-content">
+                            <h4>
+                                <span class="zh-text">GTM 員工教育訓練平台</span>
+                                <span class="en-text">GTM Employee Training Platform</span>
+                            </h4>
+                            <p class="zh-text"><strong>描述：</strong>建立規章制度管理稽核機制，確保員工訓練落實與合規。</p>
+                            <p class="en-text"><strong>Description:</strong> Established an audit mechanism for regulations management to ensure training compliance.</p>
+                            <span class="skill-tag" style="margin-top:auto; width:fit-content; margin-bottom: 1rem;">Compliance Audit</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 大類別二：前瞻研發與學術成果 -->
+        <div class="project-main-category">
+            <h2 class="main-category-title">
+                <span class="zh-text">類別二：前瞻研發與學術成果</span>
+                <span class="en-text">Category 2: Advanced R&D & Publications</span>
+            </h2>
+            
+            <div class="project-category" style="margin-bottom: 0;">
+                <div class="projects-grid">
+                    <!-- Project B1 -->
+                    <div class="project-card">
+                        <div class="project-img-placeholder">
+                            <i class="fas fa-dna"></i>
+                            <img src="./images/Project-B01-PRS.png" alt="PRS" onerror="this.style.display='none'">
+                        </div>
+                        <div class="project-content">
+                            <h4>
+                                <span class="zh-text">PRS 多基因疾病風險預測模型</span>
+                                <span class="en-text">Polygenic Risk Prediction</span>
+                            </h4>
+                            <p class="zh-text"><strong>描述：</strong>預測 457 種表型遺傳易感性，實現個人化預防醫療。</p>
+                            <p class="en-text"><strong>Description:</strong> Predicted 457 phenotypic genetic susceptibilities for personalized preventive medicine.</p>
+                            <a href="https://www.nature.com/articles/s41467-024-47472-5" target="_blank" class="project-link">Nature Communications <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project B2 -->
+                    <div class="project-card">
+                        <div class="project-img-placeholder">
+                            <i class="fas fa-heartbeat"></i>
+                            <img src="./images/Project-B02-LAA.png" alt="LAA" onerror="this.style.display='none'">
+                        </div>
+                        <div class="project-content">
+                            <h4>
+                                <span class="zh-text">大動脈硬化預測與生物標記識別</span>
+                                <span class="en-text">Atherosclerosis Prediction</span>
+                            </h4>
+                            <p class="zh-text"><strong>描述：</strong>分析大動脈粥樣硬化數據，構建 AUC 0.93 之預測模型。</p>
+                            <p class="en-text"><strong>Description:</strong> Analyzed Large Artery Atherosclerosis data, building a prediction model with AUC 0.93.</p>
+                            <a href="https://www.nature.com/articles/s41598-023-42338-0" target="_blank" class="project-link">Scientific Reports <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project B3 -->
+                    <div class="project-card">
+                        <div class="project-img-placeholder">
+                            <i class="fas fa-brain"></i>
+                            <img src="./images/Project-B03-MDD.png" alt="MDD" onerror="this.style.display='none'">
+                        </div>
+                        <div class="project-content">
+                            <h4>
+                                <span class="zh-text">憂鬱症與失眠共病之 GWAS 分析</span>
+                                <span class="en-text">GWAS Meta-Analysis of MDD & Insomnia</span>
+                            </h4>
+                            <p class="zh-text"><strong>描述：</strong>透過 GWAS 薈萃分析與 eQTL 映射，找出 719 個憂鬱症與失眠共病的關鍵基因與生物路徑。</p>
+                            <p class="en-text"><strong>Description:</strong> Identified 719 shared genes and pathways between MDD and insomnia using GWAS meta-analysis and eQTL mapping.</p>
+                            <a href="https://www.mdpi.com/2073-4425/12/10/1506" target="_blank" class="project-link">Genes <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project B4 -->
+                    <div class="project-card">
+                        <div class="project-img-placeholder">
+                            <i class="fas fa-cloud"></i>
+                            <img src="./images/Project-B04-Azure.png" alt="Azure" onerror="this.style.display='none'">
+                        </div>
+                        <div class="project-content">
+                            <h4>
+                                <span class="zh-text">Azure 基因風險查詢與可視化</span>
+                                <span class="en-text">Azure Genetic Risk Platform</span>
+                            </h4>
+                            <p class="zh-text"><strong>描述：</strong>部署整合基因與臨床數據的查詢系統，提供醫師風險評分參考。</p>
+                            <p class="en-text"><strong>Description:</strong> Deployed a query system integrating genetic and clinical data on Azure for physicians.</p>
+                            <a href="https://pgscatalog.azure.nihxcmuh.org/#/" target="_blank" class="project-link">Platform Link <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>

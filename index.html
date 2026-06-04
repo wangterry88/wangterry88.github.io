@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terry Wang (王嘉駿) - Home / Personal Brand. Software Engineer with dual Master's in Biomedical Informatics and Technology Law.">
+    <title>Terry Wang - 首頁 / Home</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="lang-zh">
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-brand">Terry Wang</div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link"><span class="zh-text">首頁</span><span class="en-text">Home</span></a>
+            <a href="resume.html" class="nav-link"><span class="zh-text">專業履歷</span><span class="en-text">Resume</span></a>
+            <a href="portfolio.html" class="nav-link"><span class="zh-text">作品集</span><span class="en-text">Portfolio</span></a>
+        </div>
+        <div class="lang-toggle" onclick="toggleLanguage()">
+            <i class="fas fa-globe"></i>
+            <span id="btn-zh" class="active">中文</span>
+            <span>/</span>
+            <span id="btn-en" class="inactive">EN</span>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <!-- ================== 1. Hero 區塊 ================== -->
+    <div class="hero-section">
+        <div class="hero-image-wrapper">
+            <img src="./images/profile.jpg" alt="Terry Wang" onerror="this.src='https://ui-avatars.com/api/?name=Terry+Wang&size=220&background=0ea5e9&color=fff&bold=true'">
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-headline">
+                <span class="zh-text">將 AI 與自動化技術<br><span style="color:var(--primary);">轉化為企業商業價值</span></span>
+                <span class="en-text">Translating AI & Automation<br><span style="color:var(--primary);">into Business Value</span></span>
+            </h1>
+            <p class="hero-subheadline">
+                <span class="zh-text">Terry Wang (王嘉駿) | 軟體工程師 @ 巨大機械<br>具備「生醫資訊」與「科技法律」雙碩士，從前瞻醫學研發到工業 4.0 落地，為企業建構最嚴謹且高效的數位架構。</span>
+                <span class="en-text">Terry Wang | Software Engineer @ GIANT Group<br>Dual Master's in Bio-Informatics & Tech Law. Bridging advanced medical research and Industry 4.0 to build highly efficient digital architectures.</span>
+            </p>
+            <div class="hero-cta">
+                <a href="portfolio.html" class="btn-primary">
+                    <i class="fas fa-rocket"></i> <span class="zh-text">瀏覽作品集</span><span class="en-text">View Portfolio</span>
+                </a>
+                <a href="resume.html" class="btn-secondary">
+                    <i class="fas fa-file-alt"></i> <span class="zh-text">完整履歷</span><span class="en-text">Read Resume</span>
+                </a>
+                <a href="./files/TerryWang-Resume.pdf" download target="_blank" class="btn-secondary" style="border-color: #ef4444; color: #ef4444 !important;">
+                    <i class="fas fa-file-pdf"></i> <span class="zh-text">下載 PDF</span><span class="en-text">PDF</span>
+                </a>
+            </div>
+            <div class="contact-info" style="color: var(--text-main); margin-top: 1rem;">
+                <div><i class="fas fa-envelope" style="color:var(--primary);"></i> <a href="mailto:wangterry88@gmail.com" style="color:var(--text-main);">wangterry88@gmail.com</a></div>
+                <div><i class="fas fa-phone" style="color:var(--primary);"></i> <span style="color:var(--text-main);">+886 933-574565</span></div>
+                <div><i class="fab fa-github" style="color:var(--primary);"></i> <a href="https://github.com/wangterry88/" target="_blank" style="color:var(--text-main);">wangterry88</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================== 2. 個人亮點數據 ================== -->
+    <div class="highlights-grid">
+        <div class="highlight-card">
+            <div class="highlight-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="highlight-info">
+                <h3><span class="zh-text">2 項</span><span class="en-text">Two</span></h3>
+                <p><span class="zh-text">雙碩士學位 (生醫資訊 × 科技法律)</span><span class="en-text">Dual Master's Degrees</span></p>
+            </div>
+        </div>
+        <div class="highlight-card">
+            <div class="highlight-icon"><i class="fas fa-laptop-code"></i></div>
+            <div class="highlight-info">
+                <h3><span class="zh-text">5+ 年</span><span class="en-text">5+ Yrs</span></h3>
+                <p><span class="zh-text">企業級開發經驗</span><span class="en-text">Development Experience</span></p>
+            </div>
+        </div>
+        <div class="highlight-card">
+            <div class="highlight-icon"><i class="fas fa-book-open"></i></div>
+            <div class="highlight-info">
+                <h3><span class="zh-text">3 篇</span><span class="en-text">Three</span></h3>
+                <p><span class="zh-text">SCI 國際期刊發表 (含 Nature 子刊)</span><span class="en-text">SCI Journal Publications</span></p>
+            </div>
+        </div>
+        <div class="highlight-card">
+            <div class="highlight-icon"><i class="fas fa-industry"></i></div>
+            <div class="highlight-info">
+                <h3><span class="zh-text">10+ 項</span><span class="en-text">10+</span></h3>
+                <p><span class="zh-text">工業數位轉型專案</span><span class="en-text">Enterprise DX Projects</span></p>
+            </div>
+        </div>
+        <div class="highlight-card">
+            <div class="highlight-icon"><i class="fas fa-certificate"></i></div>
+            <div class="highlight-info">
+                <h3><span class="zh-text">3 張</span><span class="en-text">Three</span></h3>
+                <p><span class="zh-text">跨域專業認證 (AI / TOEIC / EMT)</span><span class="en-text">Cross-Domain Certifications</span></p>
+            </div>
+        </div>
+        <div class="highlight-card">
+            <div class="highlight-icon"><i class="fas fa-project-diagram"></i></div>
+            <div class="highlight-info">
+                <h3><span class="zh-text">4 大</span><span class="en-text">Four</span></h3>
+                <p><span class="zh-text">跨領域實戰 (AI / ESG / IoT / 合規)</span><span class="en-text">Cross-Domain Expertise</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================== 3. 關於我 ================== -->
+    <section id="about">
+        <h2 class="section-title"><i class="fas fa-user"></i> 
+            <span class="zh-text">跨域優勢與核心價值 (About Me)</span>
+            <span class="en-text">About Me</span>
+        </h2>
+        <div class="two-column">
+            <div class="about-text zh-text">
+                <h4 style="color:var(--primary); margin-bottom:0.5rem;"><i class="fas fa-brain"></i> 從前瞻醫學到工業 4.0</h4>
+                <p>在 5 年多的開發職涯中，我經歷了從前瞻醫學研究到工業數位轉型的完整跨度。於醫學中心任職期間，我專注於 AI 模型研發，成功於 Nature 系列期刊發表 AI 預測模型論文，建立嚴謹的大數據建模能力。進入業界後，我將這份邏輯深度轉化為極速的實戰產出，獨立主導開發涵蓋 AI 知識庫、SGS 認證之碳足跡平台及工業 IoT 監控系統等多項數位轉型專案。</p>
+            </div>
+            <div class="about-text en-text">
+                <h4 style="color:var(--primary); margin-bottom:0.5rem;"><i class="fas fa-brain"></i> From Med-Tech to Industry 4.0</h4>
+                <p>With over 5 years of experience, my career spans from advanced medical research to industrial digital transformation. At China Medical University Hospital, I focused on AI models, publishing in Nature-affiliated journals. Upon joining GIANT Group, I translated this logical depth into rapid outputs, independently leading projects including an AI knowledge base, an SGS-certified ESG platform, and Industrial IoT systems.</p>
+            </div>
+
+            <div class="about-text zh-text">
+                <h4 style="color:var(--primary); margin-bottom:0.5rem;"><i class="fas fa-balance-scale"></i> 科技 × 法律 的跨域解題力</h4>
+                <p>身為一位兼具「生醫資訊」與「科技法律」雙碩士背景的開發者，我深知軟體不只是程式碼，更是企業營運的骨幹。我能精準鎖定痛點，結合法學思維與大數據實力，提供符合嚴格法規（如 CBP 合規）、資料安全性與自動化效率的解決方案，在多變的產業需求中，為企業建構最嚴謹且高效的數位架構。</p>
+            </div>
+            <div class="about-text en-text">
+                <h4 style="color:var(--primary); margin-bottom:0.5rem;"><i class="fas fa-balance-scale"></i> Tech × Law Interdisciplinary Power</h4>
+                <p>Holding dual Master's degrees in Bio-Med Informatics and Technology Law, I understand that software is the backbone of enterprise operations. I combine legal thinking with big data expertise to provide solutions that meet strict regulatory compliance (e.g., CBP), data security, and automation efficiency, building rigorous digital architectures for dynamic industrial needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================== 4. 核心技術 ================== -->
+    <section id="skills">
+        <h2 class="section-title"><i class="fas fa-laptop-code"></i> 
+            <span class="zh-text">核心技術 (Top Skills)</span>
+            <span class="en-text">Top Skills</span>
+        </h2>
+        
+        <div class="skill-group">
+            <div class="skill-group-title">
+                <span class="zh-text">後端與架構</span>
+                <span class="en-text">Backend & Architecture</span>
+            </div>
+            <div class="skill-tags">
+                <span class="skill-tag"><i class="fab fa-microsoft"></i> Asp.Net (C#)</span>
+                <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                <span class="skill-tag"><i class="fas fa-server"></i> Asp.Net Core</span>
+                <span class="skill-tag"><i class="fas fa-database"></i> SQL Server</span>
+            </div>
+        </div>
+
+        <div class="skill-group">
+            <div class="skill-group-title">
+                <span class="zh-text">雲端與 AI 技術</span>
+                <span class="en-text">Cloud & AI Technologies</span>
+            </div>
+            <div class="skill-tags">
+                <span class="skill-tag"><i class="fas fa-cloud"></i> Azure AI Services</span>
+                <span class="skill-tag"><i class="fas fa-robot"></i> LLM Integration</span>
+                <span class="skill-tag"><i class="fab fa-docker"></i> Docker</span>
+                <span class="skill-tag"><i class="fas fa-network-wired"></i> GCP / Oracle Cloud</span>
+            </div>
+        </div>
+
+        <div class="skill-group">
+            <div class="skill-group-title">
+                <span class="zh-text">跨領域優勢</span>
+                <span class="en-text">Interdisciplinary Strengths</span>
+            </div>
+            <div class="skill-tags">
+                <span class="zh-text">
+                    <span class="skill-tag"><i class="fas fa-leaf"></i> 產品碳足跡 (ESG)</span>
+                    <span class="skill-tag"><i class="fas fa-cogs"></i> 工業 4.0 (SCADA/RFID)</span>
+                    <span class="skill-tag"><i class="fas fa-gavel"></i> 法律貿易合規 (CBP)</span>
+                    <span class="skill-tag"><i class="fas fa-dna"></i> 生醫大數據分析</span>
+                </span>
+                <span class="en-text">
+                    <span class="skill-tag"><i class="fas fa-leaf"></i> Carbon Footprint (ESG)</span>
+                    <span class="skill-tag"><i class="fas fa-cogs"></i> Industry 4.0 (SCADA)</span>
+                    <span class="skill-tag"><i class="fas fa-gavel"></i> Trade Compliance (CBP)</span>
+                    <span class="skill-tag"><i class="fas fa-dna"></i> Big Data</span>
+                </span>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
